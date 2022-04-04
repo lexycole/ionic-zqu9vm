@@ -1,0 +1,26 @@
+<ion-header>
+<ion-navbar>
+  <ion-title>Todos</ion-title>
+  <ion-buttons end>
+    <button ion-button icon-only (click)="presentLoading()">
+    <!-- <button ion-button icon-only (click)="presentLoading()"> -->
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+ <ion-list>
+      <!-- <button ion-item *ngFor="let todo of todos" (click)="todoSelected(todo)"> -->
+      <button ion-item *ngFor="let todo of todos">
+        <span>{{ todo.title }}</span>
+        <br />
+        <span>{{ todo.completed }}</span>
+        
+      </button>
+    </ion-list>
+  </ion-list>
+</ion-content>

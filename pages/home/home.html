@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Todos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list>
+      <button ion-item *ngFor="let todo of todos">
+        <div>{{ todo.title }}</div>
+        <div>{{ todo.completed }}</div>
+      </button>
+    </ion-list>
+  </ion-list>
+</ion-content>
